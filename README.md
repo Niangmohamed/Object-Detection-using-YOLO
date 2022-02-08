@@ -1,2 +1,1 @@
-# Object-Detection-using-Yolo
-Object Detection using Yolo with OpenCV.
+# Object-Detection-using-YOLO
