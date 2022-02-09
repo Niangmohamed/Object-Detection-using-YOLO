@@ -12,4 +12,4 @@
 
 * YOLO.
 
-<p align='justify'>R-CNNs are one of the first deep learning-based object detectors and are an example of a two-stage detector.</p>
+<p align='justify'>R-CNNs are one of the first deep learning-based object detectors and are an example of a two-stage detector. In the first R-CNN publication, </p>
