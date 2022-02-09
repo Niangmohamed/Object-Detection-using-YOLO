@@ -182,3 +182,5 @@
 |       |   0   |
   
 </div>
+
+<p align="justify">Notice here that bx and by will always range between 0 and 1 as the midpoint will always lie within the grid. Whereas bh and bw can be more than 1 in case the dimensions of the bounding box are more than the dimension of the grid. In the next section, we will look at more ideas that can potentially help us in making this algorithm’s performance even better.</p>
