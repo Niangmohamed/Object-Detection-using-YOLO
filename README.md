@@ -199,3 +199,54 @@
 <p align="center">
   <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-10.png"/>
 </p>
+
+**IoU = Area of the intersection / Area of the union, i.e. IoU = Area of yellow box / Area of green box.**
+
+<p align="justify">If IoU is greater than 0.5, we can say that the prediction is good enough. 0.5 is an arbitrary threshold we have taken here, but it can be changed according to your specific problem. Intuitively, the more you increase the threshold, the better the predictions become. There is one more technique that can improve the output of YOLO significantly – Non-Max Suppression. One of the most common problems with object detection algorithms is that rather than detecting an object just once, they might detect it multiple times. Consider the below image.</p>
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-11.png"/>
+</p>
+
+<p align="justify">Here, the cars are identified more than once. The Non-Max Suppression technique cleans up this up so that we get only a single detection per object. Let’s see how this approach works.</p>
+
+<p align="justify">It first looks at the probabilities associated with each detection and takes the largest one. In the above image, 0.9 is the highest probability, so the box with 0.9 probability will be selected first.</p>
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-12.png"/>
+</p>
+
+<p align="justify">Now, it looks at all the other boxes in the image. The boxes which have high IoU with the current box are suppressed. So, the boxes with 0.6 and 0.7 probabilities will be suppressed in our example.</p>
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-13.png"/>
+</p>
+
+<p align="justify">After the boxes have been suppressed, it selects the next box from all the boxes with the highest probability, which is 0.8 in our case.</p>
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-14.png"/>
+</p>
+
+<p align="justify">Again it will look at the IoU of this box with the remaining boxes and compress the boxes with a high IoU.</p>
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-15.png"/>
+</p>
+
+
+<p align="justify">We repeat these steps until all the boxes have either been selected or compressed and we get the final bounding boxes.</p>
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-16.png"/>
+</p>
+
+<p align="justify">This is what Non-Max Suppression is all about. We are taking the boxes with maximum probability and suppressing the close-by boxes with non-max probabilities. Let’s quickly summarize the points which we’ve seen in this section about the Non-Max suppression algorithm:</p>
+
+* <p align="justify">Discard all the boxes having probabilities less than or equal to a pre-defined threshold (say, 0.5);</p>
+
+* <p align="justify">For the remaining boxes:</p>
+
+- <p align="justify">1.	Pick the box with the highest probability and take that as the output prediction;</p>
+
+- <p align="justify">Discard any other box which has IoU greater than the threshold with the output box from the above step.</p>
