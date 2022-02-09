@@ -27,5 +27,5 @@
 <p align='justify'>While interesting and novel, YOLOv2’s performance was a bit underwhelming given the title and abstract of the paper. We’ll be using YOLOv3 in this blog post, in particular, YOLO trained on the COCO dataset. The COCO dataset consists of 80 labels. YOLO — You Only Look Once — is an extremely fast multi object detection algorithm which uses convolutional neural network (CNN) to detect and identify objects. The neural network has this network architecture.</p>
 
 <p align="center">
-  <img src=""/>
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/a9d4ee8e2d6b856b0a598141624ac197c86171da/images/yolo-nn-architecture.png"/>
 </p>
