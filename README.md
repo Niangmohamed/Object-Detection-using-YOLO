@@ -53,3 +53,17 @@
 * <p align="justify">Image classification and localization are applied on each grid. YOLO then predicts the bounding boxes and their corresponding class probabilities for objects (if any are found, of course).</p>
 
 <p align="justify">Pretty straightforward, isn’t it? Let’s break down each step to get a more granular understanding of what we just learned. We need to pass the labelled data to the model in order to train it. Suppose we have divided the image into a grid of size 3 X 3 and there are a total of 3 classes which we want the objects to be classified into. Let’s say the classes are Pedestrian, Car, and Motorcycle respectively. So, for each grid cell, the label y will be an eight dimensional vector.</p>
+
+<div align='center'>
+  
+|  | pc |
+| :---: | :---: |
+|  | bx |
+| y= | by |
+|  | bh |
+|  | bw |
+|  | c1 |
+|  | c2 |
+|  | c3 |
+  
+</div>
