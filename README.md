@@ -104,3 +104,25 @@
 <p align="center">
   <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-4.png"/>
 </p>
+
+<p align="justify">Before we write the y label for this grid, it’s important to first understand how YOLO decides whether there actually is an object in the grid. In the above image, there are two objects (two cars), so YOLO will take the mid-point of these two objects and these objects will be assigned to the grid which contains the mid-point of these objects. The y label for the centre left grid with the car will be.</p>
+  
+<div align='center'>
+  
+|       |   1   |
+| :---: | :---: |
+|       |   bx  |
+|       |   by  |
+|   y   |   bh  |
+|       |   bw  |
+|       |   0   |
+|       |   1   |
+|       |   0   |
+  
+</div>
+  
+<p align="justify">Since there is an object in this grid, pc will be equal to 1. bx, by, bh, bw will be calculated relative to the particular grid cell we are dealing with. Since car is the second class, c2 = 1 and c1 and c3 = 0. So, for each of the 9 grids, we will have an eight dimensional output vector. This output will have a shape of 3 X 3 X 8. So now we have an input image and it’s corresponding target vector. Using the above example (input image – 100 X 100 X 3, output – 3 X 3 X 8), our model will be trained as follows.</p>
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-5.png"/>
+</p>
