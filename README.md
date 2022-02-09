@@ -247,6 +247,6 @@
 
 * <p align="justify">For the remaining boxes:</p>
 
-- <p align="justify">1.	Pick the box with the highest probability and take that as the output prediction;</p>
+  - <p align="justify">1.	Pick the box with the highest probability and take that as the output prediction;</p>
 
-- <p align="justify">Discard any other box which has IoU greater than the threshold with the output box from the above step.</p>
+  - <p align="justify">Discard any other box which has IoU greater than the threshold with the output box from the above step.</p>
