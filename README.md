@@ -31,5 +31,5 @@
 </p>
 
 <p align="center">
-  Source: <a href="https://arxiv.org/pdf/1506.02640.pdf">You Only Look Once: Unified, Real-Time Object Detection.</a>
+  Source: <a href="https://arxiv.org/pdf/1506.02640.pdf">You Only Look Once — Unified, Real-Time Object Detection.</a>
 </p>
