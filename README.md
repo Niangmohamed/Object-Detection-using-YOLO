@@ -25,3 +25,7 @@
 <p align='justify'>YOLO has gone through a number of different iterations, including <a href="https://arxiv.org/abs/1612.08242">YOLO9000: Better, Faster, Stronger</a> (i.e., YOLOv2), capable of detecting over 9,000 object detectors. Redmon and Farhadi are able to achieve such a large number of object detections by performing joint training for both object detection and classification. Using joint training the authors trained YOLO9000 simultaneously on both the ImageNet classification dataset and COCO detection dataset. The result is a YOLO model, called YOLO9000, that can predict detections for object classes that don’t have labeled detection data.</p>
 
 <p align='justify'>While interesting and novel, YOLOv2’s performance was a bit underwhelming given the title and abstract of the paper. We’ll be using YOLOv3 in this blog post, in particular, YOLO trained on the COCO dataset. The COCO dataset consists of 80 labels. YOLO — You Only Look Once — is an extremely fast multi object detection algorithm which uses convolutional neural network (CNN) to detect and identify objects. The neural network has this network architecture.</p>
+
+<p align="center">
+  <img src=""/>
+</p>
