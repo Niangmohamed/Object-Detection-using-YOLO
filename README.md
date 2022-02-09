@@ -83,7 +83,7 @@
   <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-3.png"/>
 </p>
 
-<p align="justify">Since there is no object in this grid, pc will be zero and the y label for this grid will be:</p>
+<p align="justify">Since there is no object in this grid, pc will be zero and the y label for this grid will be.</p>
 
 <div align='center'>
   
@@ -98,3 +98,9 @@
 |       |   ?   |
   
 </div>
+
+<p align="justify">Here, <b>?</b> means that it doesn’t matter what bx, by, bh, bw, c1, c2, and c3 contain as there is no object in the grid. Let’s take another grid in which we have a car (c2 = 1).</p>
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-4.png"/>
+</p>
