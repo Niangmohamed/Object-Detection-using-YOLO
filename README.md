@@ -131,10 +131,32 @@
 
 <p align="justify">Even if an object spans out to more than one grid, it will only be assigned to a single grid in which its mid-point is located. We can reduce the chances of multiple objects appearing in the same grid cell by increasing the more number of grids (19 X 19, for example).</p>
 
-## How to Encode Bounding Boxes?
+## How to encode bounding boxes?
 
 <p align="justify">As I mentioned earlier, bx, by, bh, and bw are calculated relative to the grid cell we are dealing with. Let’s understand this concept with an example. Consider the center-right grid which contains a car.</p>
 
 <p align="center">
   <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-6.png"/>
+</p>
+
+<p align="justify">So, bx, by, bh, and bw will be calculated relative to this grid only. The y label for this grid will be.</p>
+
+<div align='center'>
+  
+|       |   1   |
+| :---: | :---: |
+|       |   bx  |
+|       |   by  |
+|   y   |   bh  |
+|       |   bw  |
+|       |   0   |
+|       |   1   |
+|       |   0   |
+  
+</div>
+
+<p align="justify">pc = 1 since there is an object in this grid and since it is a car, c2 = 1. Now, let’s see how to decide bx, by, bh, and bw. In YOLO, the coordinates assigned to all the grids are.</p>
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-7.png"/>
 </p>
