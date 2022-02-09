@@ -166,3 +166,19 @@
 <p align="center">
   <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-8.png"/>
 </p>
+
+<p align="justify">bh is the ratio of the height of the bounding box (red box in the above example) to the height of the corresponding grid cell, which in our case is around 0.9. So,  bh = 0.9. bw is the ratio of the width of the bounding box to the width of the grid cell. So, bw = 0.5 (approximately). The y label for this grid will be.</p>
+
+<div align='center'>
+  
+|       |   1   |
+| :---: | :---: |
+|       |   0.4 |
+|       |   0.3 |
+|   y   |   0.9 |
+|       |   0.5 |
+|       |   0   |
+|       |   1   |
+|       |   0   |
+  
+</div>
