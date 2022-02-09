@@ -67,3 +67,11 @@
 |       |   c3  |
   
 </div>
+
+<p align="justify">Here:</p>
+
+* pc defines whether an object is present in the grid or not (it is the probability);
+
+* bx, by, bh, bw specify the bounding box if there is an object;
+
+* c1, c2, c3 represent the classes. So, if the object is a car, c2 will be 1 and c1 & c3 will be 0, and so on.
