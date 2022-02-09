@@ -43,3 +43,9 @@
 <p align="center">
   <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-1.png"/>
 </p>
+
+* The framework then divides the input image into grids (say a 3 X 3 grid).
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-2.png"/>
+</p>
