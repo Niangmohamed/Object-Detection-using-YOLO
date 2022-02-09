@@ -82,3 +82,19 @@
 <p align="center">
   <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-3.png"/>
 </p>
+
+<p align="justify">Since there is no object in this grid, pc will be zero and the y label for this grid will be:</p>
+
+<div align='center'>
+  
+|       |   0   |
+| :---: | :---: |
+|       |   ?   |
+|       |   ?   |
+|   y   |   ?   |
+|       |   ?   |
+|       |   ?   |
+|       |   ?   |
+|       |   ?   |
+  
+</div>
