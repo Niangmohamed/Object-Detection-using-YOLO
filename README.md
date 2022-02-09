@@ -29,3 +29,7 @@
 <p align="center">
   <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/a9d4ee8e2d6b856b0a598141624ac197c86171da/images/yolo-nn-architecture.png"/>
 </p>
+
+<p align="center">
+  Source: <a href="https://arxiv.org/pdf/1506.02640.pdf">You Only Look Once: Unified, Real-Time Object Detection.</a>
+</p>
