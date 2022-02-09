@@ -315,3 +315,8 @@
 |      | c3   |
 
   </div>
+
+<p align="justify">The first 8 rows belong to anchor box 1 and the remaining 8 belongs to anchor box 2. The objects are assigned to the anchor boxes based on the similarity of the bounding boxes and the anchor box shape. Since the shape of anchor box 1 is similar to the bounding box for the person, the latter will be assigned to anchor box 1 and the car will be assigned to anchor box 2. The output in this case, instead of 3 X 3 X 8 (using a 3 X 3 grid and 3 classes), will be 3 X 3 X 16 (since we are using 2 anchors).</p>
+
+
+<p align="justify">So, for each grid, we can detect two or more objects based on the number of anchors. Let’s combine all the ideas we have covered so far and integrate them into the YOLO framework.</p>
