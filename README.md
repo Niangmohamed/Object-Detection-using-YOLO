@@ -184,3 +184,12 @@
 </div>
 
 <p align="justify">Notice here that bx and by will always range between 0 and 1 as the midpoint will always lie within the grid. Whereas bh and bw can be more than 1 in case the dimensions of the bounding box are more than the dimension of the grid. In the next section, we will look at more ideas that can potentially help us in making this algorithm’s performance even better.</p>
+
+## Intersection over Union and Non-Max Suppression
+
+<p align="justify">Here’s some food for thought – how can we decide whether the predicted bounding box is giving us a good outcome (or a bad one)? This is where Intersection over Union comes into the picture. It calculates the intersection over union of the actual bounding box and the predicted bonding box. Consider the actual and predicted bounding boxes for a car as shown below.</p>
+
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-9.png"/>
+</p>
