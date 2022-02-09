@@ -250,3 +250,68 @@
   - <p align="justify">1.	Pick the box with the highest probability and take that as the output prediction;</p>
 
   - <p align="justify">Discard any other box which has IoU greater than the threshold with the output box from the above step.</p>
+
+* <p align="justify">Repeat step 2 until all the boxes are either taken as the output prediction or discarded.</p>
+
+<p align="justify">There is another method we can use to improve the perform of a YOLO algorithm – let’s check it out!</p>
+
+## Anchor boxes
+
+<p align="justify">We have seen that each grid can only identify one object. But what if there are multiple objects in a single grid? That can so often be the case in reality. And that leads us to the concept of anchor boxes. Consider the following image, divided into a 3 X 3 grid.</p>
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-17.png"/>
+</p>
+
+<p align="justify">Remember how we assigned an object to a grid? We took the midpoint of the object and based on its location, assigned the object to the corresponding grid. In the above example, the midpoint of both the objects lies in the same grid. This is how the actual bounding boxes for the objects will be.</p>
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-18.png"/>
+</p>
+
+<p align="justify">We will only be getting one of the two boxes, either for the car or for the person. But if we use anchor boxes, we might be able to output both boxes! How do we go about doing this? First, we pre-define two different shapes called anchor boxes or anchor box shapes. Now, for each grid, instead of having one output, we will have two outputs. We can always increase the number of anchor boxes as well. I have taken two here to make the concept easy to understand.</p>
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-19.png"/>
+</p>
+
+<p align="justify">This is how the y label for YOLO without anchor boxes looks like.</p>
+
+
+<div align='center'>
+  
+|       |   pc  |
+| :---: | :---: |
+|       |   bx  |
+|       |   by  |
+|   y   |   bh  |
+|       |   bw  |
+|       |   c1  |
+|       |   c2  |
+|       |   c3  |
+  
+</div>
+
+<p align="justify">What do you think the y label will be if we have 2 anchor boxes? I want you to take a moment to ponder this before reading further. Got it? The y label will be.</p>
+
+<div align='center'>
+
+|      | pc   |
+| :--- | :--- |
+|      | bx   |
+|      | by   |
+|      | bh   |
+|      | bw   |
+|      | c1   |
+|      | c2   |
+|   y  | c3   |
+|      | pc   |
+|      | bx   |
+|      | by   |
+|      | bh   |
+|      | bw   |
+|      | c1   |
+|      | c2   |
+|      | c3   |
+
+  </div>
