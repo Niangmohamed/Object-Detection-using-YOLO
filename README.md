@@ -75,3 +75,10 @@
 * bx, by, bh, bw specify the bounding box if there is an object;
 
 * c1, c2, c3 represent the classes. So, if the object is a car, c2 will be 1 and c1 & c3 will be 0, and so on.
+
+
+<p align="justify">Let’s say we select the first grid from the above example.</p>
+
+<p align="center">
+  <img src="https://github.com/Niangmohamed/Object-Detection-using-YOLO/blob/353a2be4fd8750b044c4f0c3bcbe3168d200c043/images/image-3.png"/>
+</p>
