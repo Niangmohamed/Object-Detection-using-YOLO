@@ -37,3 +37,6 @@
 ## How does the YOLO framework works?
 
 <p align='justify'>Now that we have grasp on why YOLO is such a useful framework, let’s jump into how it actually works. In this section, I have mentioned the steps followed by YOLO for detecting objects in a given image.</p>
+
+* YOLO first takes an input image.
+
